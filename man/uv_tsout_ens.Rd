@@ -26,6 +26,7 @@ A list with the following components:
 Performs univariate time series outlier ensemble.
 }
 \examples{
+\dontrun{
 set.seed(100)
 n <- 500
 x <- sample(1:100, n, replace=TRUE)
@@ -35,5 +36,6 @@ df <- data.frame(timestamp=1:n, value=x)
 plot(ts(df$value))
 out <- uv_tsout_ens(x)
 out
+}
 
 }

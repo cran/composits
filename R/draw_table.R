@@ -1,11 +1,11 @@
-#' Draws table from comp_tsout_ens or mv_tsout_ens output using tableGrob.
+#' Draws table from comp_tsout_ens or mv_tsout_ens output.
 #'
 #' @param obj The output from \code{comp_tsout_ens} or \code{mv_tsout_ens} functions.
 #' @param uniq_dates An optional parameter to pass in the dates for the dataset.
 #' @return Draws a table using R packages \code{grid} and \code{gridExtra}.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -106,12 +106,12 @@ draw_table <- function(obj, uniq_dates=NULL){
 }
 
 
-#' Draws an html table from comp_tsout_ens or mv_tsout_ens output using kableExtra.
+#' Draws an html table from comp_tsout_ens or mv_tsout_ens output.
 #'
 #' @inheritParams draw_table
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)

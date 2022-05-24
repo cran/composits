@@ -1,5 +1,5 @@
 ---
-title: "Introduction to composits"
+title: "composits"
 output: rmarkdown::html_vignette
 bibliography: bibliography.bib
 vignette: >
@@ -45,8 +45,8 @@ if (!requireNamespace("broom", quietly = TRUE)) {
     stop("Package broom is needed for the vignette. Please install it.",
       call. = FALSE)
 }
-if (!requireNamespace("rgdal", quietly = TRUE)) {
-    stop("Package rgdal is needed for the vignette. Please install it.",
+if (!requireNamespace("maptools", quietly = TRUE)) {
+    stop("Package maptools is needed for the vignette. Please install it.",
       call. = FALSE)
 }
 ```
@@ -60,7 +60,7 @@ library(dplyr)
 library(tidyr)
 library(stringr)
 library(broom)
-library(rgdal)
+library(maptools)
 ```
 
 The goal of *composits* is to find outliers in compositional, multivariate and univariate time series. It is an outlier ensemble method that uses the outlier detection methods from R packages ``` forecast ```, ``` tsoutliers ```, ``` anomalize ``` and ```otsad ```. All the options provided in those packages can be included in the calls for each of the methods used in the ensemble function so that the user can create a more customize ensemble.
@@ -206,7 +206,7 @@ Next we plot this using the map of Spain.
 
 
 ```{r composite5}
-shapefile_ccaa <- readOGR(dsn="ComunidadesAutonomas_ETRS89_30N/Comunidades_Autonomas_ETRS89_30N.shp")
+shapefile_ccaa <- readShapePoly("ComunidadesAutonomas_ETRS89_30N/Comunidades_Autonomas_ETRS89_30N.shp", proj4string=CRS("+proj=longlat")) 
 data_ccaa <- tidy(shapefile_ccaa)
 nombres_ccaa <- tibble(shapefile_ccaa$Texto) %>% 
   mutate(id = as.character(seq(0, nrow(.)-1)))
@@ -250,6 +250,6 @@ sp_data %>%
 ```
 
 
-See our  [website](https://sevvandi.github.io/composits/index.html) or our paper [@composits] *** for more examples.   
+See our  [website](https://sevvandi.github.io/composits/index.html) or our paper [@composits] for more examples.   
 
 # References

@@ -23,7 +23,7 @@ tsout_ensemble_1M <- function(x, pre=0, ncomp = NULL){ #, wts = NULL
       y <- dobout$coords[ ,1:ncomp]
       wts <- 1/(1:ncomp)
       wts <- wts/sum(wts)
-      load_vectors <- dobout$vec[ ,1:ncomp]
+      load_vectors <- dobout$rotation[ ,1:ncomp]
     }else if(pre==2){
       # pca pre-processing
       pca <- prcomp(x)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/draw_table.R
 \name{draw_table_html}
 \alias{draw_table_html}
-\title{Draws an html table from comp_tsout_ens or mv_tsout_ens output using kableExtra.}
+\title{Draws an html table from comp_tsout_ens or mv_tsout_ens output.}
 \usage{
 draw_table_html(obj, uniq_dates = NULL)
 }
@@ -12,10 +12,10 @@ draw_table_html(obj, uniq_dates = NULL)
 \item{uniq_dates}{An optional parameter to pass in the dates for the dataset.}
 }
 \description{
-Draws an html table from comp_tsout_ens or mv_tsout_ens output using kableExtra.
+Draws an html table from comp_tsout_ens or mv_tsout_ens output.
 }
 \examples{
-\donttest{
+\dontrun{
 set.seed(100)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)

@@ -4,9 +4,7 @@
 # composits <a href='https://sevvandi.github.io/composits/'><img src='man/figures/logo.png' align="right" height="138" /></a>
 
 <!-- badges: start -->
-
-[![Travis build
-status](https://travis-ci.org/sevvandi/composits.svg?branch=master)](https://travis-ci.org/sevvandi/composits)
+[![R-CMD-check](https://github.com/sevvandi/composits/workflows/R-CMD-check/badge.svg)](https://github.com/sevvandi/composits/actions)
 <!-- badges: end -->
 
 The goal of *composits* is to find outliers in compositional,
@@ -16,13 +14,12 @@ method that uses the packages `forecast`, `tsoutliers`, `anomalize` and
 
 ## Installation
 
-<!-- You can install the released version of composits from [CRAN](https://CRAN.R-project.org) with: -->
+You can install the released version of composits from
+[CRAN](https://CRAN.R-project.org) with:
 
-<!-- ``` r -->
-
-<!-- install.packages("composits") -->
-
-<!-- ``` -->
+``` r
+install.packages("composits")
+```
 
 You can install the development version from
 [GitHub](https://github.com/) with:
@@ -46,16 +43,9 @@ X <- cbind.data.frame(x, x2, x3)
 x4 <- sample(1:100, n, replace=TRUE)
 X <- cbind.data.frame(x, x2, x3, x4)
 out <- mv_tsout_ens(X)
-#> Registered S3 method overwritten by 'xts':
-#>   method     from
-#>   as.zoo.xts zoo
 #> Registered S3 method overwritten by 'quantmod':
 #>   method            from
 #>   as.zoo.data.frame zoo
-#> Registered S3 methods overwritten by 'forecast':
-#>   method             from    
-#>   fitted.fracdiff    fracdiff
-#>   residuals.fracdiff fracdiff
 #> Converting from tbl_df to tbl_time.
 #> Auto-index message: index = date
 #> frequency = 7 days
@@ -104,18 +94,16 @@ out <- mv_tsout_ens(X)
 #> Auto-index message: index = date
 #> frequency = 7 days
 #> trend = 91 days
-#> Warning in outthres1$gapscore1 <- rep(0, length(indthres1)): Coercing LHS
-#> to a list
 out$all
-#>     Indices Total_Score Num_Coords Num_Methods     DOBIN      PCA
-#> res     320        1.75          3           3 0.3144603 0.728004
-#>           ICA forecast tsoutliers otsad anomalize
-#> res 0.7075357      0.5        0.5     0      0.75
+#>     Indices Total_Score Num_Coords Num_Methods     DOBIN      PCA       ICA
+#> res     320        1.75          3           3 0.3144603 0.728004 0.7075357
+#>     forecast tsoutliers otsad anomalize
+#> res      0.5        0.5     0      0.75
 out$outliers
-#>   Indices Total_Score Num_Coords Num_Methods     DOBIN      PCA       ICA
-#> 1     320        1.75          3           3 0.3144603 0.728004 0.7075357
-#>   forecast tsoutliers otsad anomalize Gap_Score_1
-#> 1      0.5        0.5     0      0.75           2
+#>     Indices Total_Score Num_Coords Num_Methods     DOBIN      PCA       ICA
+#> res     320        1.75          3           3 0.3144603 0.728004 0.7075357
+#>     forecast tsoutliers otsad anomalize
+#> res      0.5        0.5     0      0.75
 ```
 
 See our [website](https://sevvandi.github.io/composits/index.html) or
@@ -123,9 +111,9 @@ our paper (Kandanaarachchi et al. 2020) for more examples.
 
 # References
 
-<div id="refs" class="references hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
-<div id="ref-composits">
+<div id="ref-composits" class="csl-entry">
 
 Kandanaarachchi, Sevvandi, Patricia Menendez, Ruben Loaiza-Maya, and
 Ursula Laa. 2020. “Outliers in Compositional Time Series Data.” Working

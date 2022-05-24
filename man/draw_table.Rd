@@ -2,7 +2,7 @@
 % Please edit documentation in R/draw_table.R
 \name{draw_table}
 \alias{draw_table}
-\title{Draws table from comp_tsout_ens or mv_tsout_ens output using tableGrob.}
+\title{Draws table from comp_tsout_ens or mv_tsout_ens output.}
 \usage{
 draw_table(obj, uniq_dates = NULL)
 }
@@ -15,10 +15,10 @@ draw_table(obj, uniq_dates = NULL)
 Draws a table using R packages \code{grid} and \code{gridExtra}.
 }
 \description{
-Draws table from comp_tsout_ens or mv_tsout_ens output using tableGrob.
+Draws table from comp_tsout_ens or mv_tsout_ens output.
 }
 \examples{
-\donttest{
+\dontrun{
 set.seed(100)
 n <- 600
 x <- sample(1:100, n, replace=TRUE)

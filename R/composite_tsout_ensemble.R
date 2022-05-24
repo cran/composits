@@ -17,7 +17,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)

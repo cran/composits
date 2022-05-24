@@ -22,7 +22,7 @@
 #' \item{\code{outmat4D}}{A 4D array with outlier scores organised by outlier method, decomposition method, components for each decomposition method and time.}
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' set.seed(100)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
@@ -34,7 +34,6 @@
 #' X <- cbind.data.frame(x, x2, x3, x4)
 #' out <- mv_tsout_ens(X, m1=c(1,2,4), compr=2)
 #' }
-#'
 #'
 #' @importFrom stats prcomp rnorm runif
 #' @export

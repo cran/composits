@@ -7,7 +7,7 @@
 #' \item{\code{scores_all}}{The apportioned outlier scores of all identified outliers.}
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' set.seed(1)
 #' n <- 600
 #' x <- sample(1:100, n, replace=TRUE)
